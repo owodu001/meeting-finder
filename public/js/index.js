@@ -1,4 +1,4 @@
-import API from "/js/api.js";
+import API, { string } from "/js/api.js";
 
 // Get references to page elements
 const exampleTextEl = document.getElementById("example-text");
