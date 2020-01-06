@@ -1,6 +1,8 @@
 var db = require("../models");
 
 const num = "12";
+// const realNum = parseInt(num, 10);
+// console.log(realNum);
 
 module.exports = {
   postExampleApi: async function(req, res) {
