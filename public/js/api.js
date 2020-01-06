@@ -21,3 +21,5 @@ export default {
     }).then(res => res.json);
   }
 };
+
+export const string = "something";
