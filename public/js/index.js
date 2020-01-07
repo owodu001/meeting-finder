@@ -13,28 +13,52 @@ aboutButtonEl.addEventListener("click", function() {
 
 //Axios call to the AA database
 
-// const day = document.getElementById("search-day").value
-// const time = document.getElementById("search-time").value
-// const location = document.getElementById("search-location").value
-const day = "monday";
-const time = "evening";
-const location = "Sydney";
+const searchButtonEl = document.getElementById("search-button");
+searchButtonEl.addEventListener("click", function() {
+  // const day = document.getElementById("search-day").value
+  // const time = document.getElementById("search-time").value
+  const location = document.getElementById("search-location").value;
+  const day = "monday";
+  const time = "evening";
+  // const location = "Sydney";
 
-const queryURL =
-  "https://api.aa.org.au/meetings.json?day=" +
-  day +
-  "&timeofday=" +
-  time +
-  "&near=" +
-  location +
-  "&limit=20&offset=0";
-console.log(queryURL);
+  const queryURL =
+    "https://api.aa.org.au/meetings.json?day=" +
+    day +
+    "&timeofday=" +
+    time +
+    "&near=" +
+    location +
+    "&limit=20&offset=0";
+  console.log(queryURL);
 
-// eslint-disable-next-line no-undef
-axios.get(queryURL).then(function(response) {
-  console.log(response.data.meetings);
+  // eslint-disable-next-line no-undef
+  axios.get(queryURL).then(function(response) {
+    console.log(response.data.meetings[0]);
+    const meetingsArr = response.data.meetings;
+    for (let i = 0; i < 10; i++) {
+      const meeting = meetingsArr[i];
+      console.log(meeting);
+      $("#meeting-container").append(`   
+<div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        ${meeting.title}
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+`);
+    }
+  });
 });
-
 // axios.get(queryURL3)
 //     .then(function(uvResponse) {
 //         // console.log(uvResponse);
