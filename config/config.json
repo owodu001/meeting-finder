@@ -2,9 +2,9 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "exampledb",
+    "database": "user_db",
     "host": "localhost",
-    "port": "8889",
+    "port": "3306",
     "dialect": "mysql"
   },
   "test": {
@@ -12,7 +12,7 @@
     "password": "root",
     "database": "testdb",
     "host": "127.0.0.1",
-    "port": "8889",
+    "port": "3306",
     "socketPath": "~travis/.my.cnf",
     "dialect": "mysql",
     "logging": false
