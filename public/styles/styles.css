@@ -1,4 +1,4 @@
-.header-cont {
+.header-cont-Matt {
   width: 99vw;
   position: absolute;
   top: 4vh;
@@ -6,7 +6,11 @@
   justify-content: center;
 }
 
-.header-text {
+.gap {
+  height: 150px;
+}
+
+.header-text-Matt {
   position: relative;
   width: 90vw;
   text-align: center;
@@ -15,8 +19,8 @@
   /* background-color: rgba(0, 0, 0, 0.185); */
 }
 
-.header-text:before,
-.header-text:after {
+.header-text-Matt:before,
+.header-text-Matt:after {
   content: "";
   display: block;
   position: absolute;
@@ -27,12 +31,12 @@
   height: 14vh;
 }
 
-.header-text:before {
+.header-text-Matt:before {
   top: -15px;
   left: 35px;
 }
 
-.header-text:after {
+.header-text-Matt:after {
   top: 0.5vh;
 }
 
