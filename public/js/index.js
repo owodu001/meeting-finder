@@ -11,6 +11,36 @@ aboutButtonEl.addEventListener("click", function() {
   botBarEl.classList.toggle("bar3clicked");
 });
 
+//Axios call to the AA database
+
+// const day = document.getElementById("search-day").value
+// const time = document.getElementById("search-time").value
+// const location = document.getElementById("search-location").value
+const day = "monday";
+const time = "evening";
+const location = "Sydney";
+
+const queryURL =
+  "https://api.aa.org.au/meetings.json?day=" +
+  day +
+  "&timeofday=" +
+  time +
+  "&near=" +
+  location +
+  "&limit=20&offset=0";
+console.log(queryURL);
+
+// eslint-disable-next-line no-undef
+axios.get(queryURL).then(function(response) {
+  console.log(response.data.meetings);
+});
+
+// axios.get(queryURL3)
+//     .then(function(uvResponse) {
+//         // console.log(uvResponse);
+//         document.getElementById("uv").innerHTML = "UV Index: " + uvResponse.data.value;
+//     })
+
 // // Get references to page elements
 // const exampleTextEl = document.getElementById("example-text");
 // const exampleDescriptionEl = document.getElementById("example-description");
