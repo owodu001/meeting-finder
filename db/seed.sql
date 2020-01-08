@@ -1,10 +1,7 @@
-
-
-const quotes = [
-    "I have found that the process of discovering who I really am begins with knowing who I really don't want to be.",
-    "And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation some fact of my life unacceptable to me, and I can find no serenity until I accept that person, place, thing, or situation as being exactly the way it is supposed to be at this moment.",
-    "I have come to believe that hard times are not just meaningless suffering and that something good might turn up at any moment. That's a big change for someone who used to come to in the morning feeling sentenced to another day of life. When I wake up today, there are lots of possibilities. I can hardly wait to see what's going to happen next.",
-    "When I stopped living in the problem and began living in the answer, the problem went away.",
+INSERT INTO quotes_db (id, quote) VALUES (
+    'I have found that the process of discovering who I really am begins with knowing who I really dont want to be',
+    'And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation "some fact of my life" unacceptable to me, and I can find no serenity until I accept that person, place, thing, or situation as being exactly the way it is supposed to be at this moment.',
+    'I have come to believe that hard times are not just meaningless suffering and that something good might turn up at any moment. Thats a big change for someone who used to come to in the morning feeling sentenced to another day of life. When I wake up today, there are lots of possibilities. I can hardly wait to see whats going to happen next.',
     'First of all, we had to quit playing God. It didnt work.',
     'The feeling of having shared in a common peril is one element in the powerful cement which binds us.',
     'There is an island of opportunity in the middle of every difficulty.',
@@ -22,6 +19,7 @@ const quotes = [
     'How did people have conversations anyway? How did they meet and then begin to talk as if they had known each other for years?',
     'If we still cling to something we will not let go, we ask God to help us be willing.',
     'Identifying, they said, was trying to see how I was like the people I was with. Comparing, they told me, was looking for differences, usually seeing how I was better than others.'
-]
-const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-console.log(randomQuote)
+
+    
+    
+    );
