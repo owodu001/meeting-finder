@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
@@ -27,18 +26,28 @@
 
         <div class="container" id="meeting-container">
             <div class="input-group mb-3">
-                <input type="text" id="search-location" class="form-control"
-                    placeholder="Please enter a zip code or city name" aria-label="Recipient's username"
-                    aria-describedby="button-addon2">
+                <input type="text" id="search-location" class="form-control" placeholder="Please enter a zip code or city name" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button id="search-button" class="btn btn-outline-secondary" type="button"
-                        id="button-addon2">Search</button>
+                    <button id="search-button" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+
                 </div>
             </div>
-
+            <button class="advanced-search" id="advanced-search">Advanced Search</button>
+            <div class="input-group mb-3">
+                <input type="text" id="search-day" class="d-none form-control" placeholder="Please enter a day" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" id="search-time" class="d-none form-control" placeholder="Please enter either morning or evening" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                </div>
+            </div>
         </div>
     </div>
-    <footer></footer>
+    <footer id="footer-quote">
+
+    </footer>
 
     <!-- <h1>Example</h1>
     <input id="example-text">
@@ -48,6 +57,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/index.js" type="module"></script>
+    <script src="/js/quoteArray.js"></script>
 </body>
 
 </html>

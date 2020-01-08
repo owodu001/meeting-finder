@@ -13,6 +13,9 @@ footer {
   height: 10vh;
   width: 100vw;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main-body-content {
@@ -129,4 +132,17 @@ footer {
 .data {
   font-weight: 300;
   font-family: "Oswald", sans-serif;
+}
+
+.footer-quote {
+  text-align: center;
+}
+
+button.advanced-search {
+  background: none;
+  border: none;
+}
+
+.advanced-search:hover {
+  text-decoration: underline;
 }
