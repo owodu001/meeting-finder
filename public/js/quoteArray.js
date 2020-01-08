@@ -23,3 +23,6 @@ const quotes = [
 ];
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 console.log(randomQuote);
+
+const displayQuote = document.getElementById("footer-quote");
+displayQuote.innerHTML = ` <p class="footer-quote">"${randomQuote}"</p> `;

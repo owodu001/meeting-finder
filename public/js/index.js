@@ -11,15 +11,26 @@ aboutButtonEl.addEventListener("click", function() {
   botBarEl.classList.toggle("bar3clicked");
 });
 
+// advanced search event listener
+const advancedSearchEl = document.getElementById("advanced-search");
+const daySearchEl = document.getElementById("search-day");
+const timeSearchEl = document.getElementById("search-time");
+advancedSearchEl.addEventListener("click", function() {
+  daySearchEl.classList.remove("d-none");
+  timeSearchEl.classList.remove("d-none");
+});
+
 //Axios call to the AA database
 
 const searchButtonEl = document.getElementById("search-button");
 searchButtonEl.addEventListener("click", function() {
-  // const day = document.getElementById("search-day").value
-  // const time = document.getElementById("search-time").value
+  const day = document.getElementById("search-day").value;
+  const time = document.getElementById("search-time").value;
   const location = document.getElementById("search-location").value;
-  const day = "monday";
-  const time = "evening";
+  // console.log(day);
+  // console.log(time);
+  // const day = " ";
+  // const time = " ";
   // const location = "Sydney";
 
   const queryURL =
