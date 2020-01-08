@@ -6,26 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
 
-    <div class="header-cont">
-        <div class="header-text">Meeting Finder</div>
+    <div class="header-cont-Matt">
+        <div class="header-text-Matt">Meeting Finder</div>
     </div>
     <div class="about-box" id="about-box">
         <div class="bar1" id="bar1"></div>
         <div class="bar2" id="bar2"></div>
         <div class="bar3" id="bar3"></div>
     </div>
-
+    <div class="row gap"></div>
+    <div class="container" id="meeting-container">
+        <div class="input-group mb-3">
+            <input type="text" id="search-location" class="form-control" placeholder="Please enter a zip code or city name" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button id="search-button" class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Quote
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
     <!-- <h1>Example</h1>
     <input id="example-text">
     <input id="example-description">
     <button id="submit">submit</button>
     <div id="example-list"></div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/index.js" type="module"></script>
 </body>
