@@ -1,4 +1,4 @@
-var db = require("../models");
+const db = require("../models");
 
 const num = "12";
 // const realNum = parseInt(num, 10);
@@ -6,19 +6,19 @@ const num = "12";
 
 module.exports = {
   postExampleApi: async function(req, res) {
-    const dbExample = await db.Example.create(req.body);
-    res.json(dbExample);
+    const user = await db.userInfo.create(req.body);
+    res.json(user);
   },
   api: function(app) {
     // Get all examples
-    app.get("/api/examples", function(req, res) {
-      db.Example.findAll({}).then(function(dbExamples) {
-        res.json(dbExamples);
+    app.get("/api/user", function(req, res) {
+      db.UserInfo.findAll({}).then(function(user) {
+        res.json(user);
       });
     });
 
     // Get an example
-    app.get("/api/examples/:id", function(req, res) {
+    app.get("/api/user/:id", function(req, res) {
       console.log({ id: req.params.id });
       db.Example.findAll({ where: { id: req.params.id } }).then(function(
         dbExamples
@@ -28,11 +28,23 @@ module.exports = {
       });
     });
 
+    //add meeting route
+    app.get("/api/user/:id", function(req, res) {
+      console.log({ id: req.params.id });
+      db.UserInfo.update(
+        { meeting_id: req.body.meetingId },
+        { where: { id: req.params.id } }
+      ).then(function(dbExamples) {
+        console.log(dbExamples);
+        res.json(dbExamples[0]);
+      });
+    });
+
     // Create a new example
-    app.post("/api/examples", this.postExampleApi);
+    app.post("/api/user", this.postExampleApi);
 
     // Delete an example by id
-    app.delete("/api/examples/:id", function(req, res) {
+    app.delete("/api/user/:id", function(req, res) {
       db.Example.destroy({ where: { id: req.params.id } }).then(function(
         dbExample
       ) {
