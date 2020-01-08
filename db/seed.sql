@@ -1,3 +1,25 @@
+CREATE TABLE user_info (
+    id INT NOT NULL AUTO_INCREMENT,
+    first_name NOT NULL VARCHAR (50),
+    last_name  NOT NULL VARCHAR (50),
+    days_sober INT (11),
+    sponsor_first VARCHAR (50),
+    sponsor_last VARCHAR (50),
+    sponsor_cell  VARCHAR (10),
+    meeting_id INT (10) NOT NULL,
+    type VARCHAR (100),
+    meeting_location VARCHAR (100),
+    directions VARCHAR (100),
+    meeting_1 VARCHAR (20), 
+    meeting_2 VARCHAR (20),
+    meeting_3 VARCHAR (20),
+    meeting_4 VARCHAR (20),
+    meeting_5 VARCHAR (20),
+    meeting_6 VARCHAR (20),
+    meeting_7 VARCHAR (20),
+    PRIMARY KEY (id)
+);
+=======
 INSERT INTO quotes_db (id, quote) VALUES (
     'I have found that the process of discovering who I really am begins with knowing who I really dont want to be',
     'And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation "some fact of my life" unacceptable to me, and I can find no serenity until I accept that person, place, thing, or situation as being exactly the way it is supposed to be at this moment.',
@@ -23,3 +45,4 @@ INSERT INTO quotes_db (id, quote) VALUES (
     
     
     );
+ 
