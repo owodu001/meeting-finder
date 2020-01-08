@@ -1,7 +1,7 @@
 // The API object contains methods for each kind of request we'll make
 export default {
   saveExample: function(example) {
-    return fetch("/api/examples", {
+    return fetch("/api/user", {
       headers: {
         "Content-Type": "application/json"
       },
@@ -10,13 +10,18 @@ export default {
     }).then(res => res.json());
   },
   getExamples: function() {
-    return fetch("/api/examples").then(res => res.json());
+    return fetch("/api/user").then(res => res.json());
   },
   getExample: function(id) {
-    return fetch(`/api/examples/${id}`).then(res => res.json());
+    return fetch(`/api/user/${id}`).then(res => res.json());
+  },
+  addMeeting: function(id) {
+    return fetch("/api/user/" + id, {
+      method: "PUT"
+    }).then(res => res.json);
   },
   deleteExample: function(id) {
-    return fetch("/api/examples/" + id, {
+    return fetch("/api/user/" + id, {
       method: "DELETE"
     }).then(res => res.json);
   }

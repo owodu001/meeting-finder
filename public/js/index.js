@@ -73,13 +73,8 @@ searchButtonEl.addEventListener("click", function() {
     }
   });
 });
-// axios.get(queryURL3)
-//     .then(function(uvResponse) {
-//         // console.log(uvResponse);
-//         document.getElementById("uv").innerHTML = "UV Index: " + uvResponse.data.value;
-//     })
 
-// // Get references to page elements
+// Get references to page elements
 // const exampleTextEl = document.getElementById("example-text");
 // const exampleDescriptionEl = document.getElementById("example-description");
 // const submitBtnEl = document.getElementById("submit");
