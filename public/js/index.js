@@ -11,15 +11,26 @@ aboutButtonEl.addEventListener("click", function() {
   botBarEl.classList.toggle("bar3clicked");
 });
 
+// advanced search event listener
+const advancedSearchEl = document.getElementById("advanced-search");
+const daySearchEl = document.getElementById("search-day");
+const timeSearchEl = document.getElementById("search-time");
+advancedSearchEl.addEventListener("click", function() {
+  daySearchEl.classList.remove("d-none");
+  timeSearchEl.classList.remove("d-none");
+});
+
 //Axios call to the AA database
 
 const searchButtonEl = document.getElementById("search-button");
 searchButtonEl.addEventListener("click", function() {
-  // const day = document.getElementById("search-day").value
-  // const time = document.getElementById("search-time").value
+  const day = document.getElementById("search-day").value;
+  const time = document.getElementById("search-time").value;
   const location = document.getElementById("search-location").value;
-  const day = "monday";
-  const time = "evening";
+  // console.log(day);
+  // console.log(time);
+  // const day = " ";
+  // const time = " ";
   // const location = "Sydney";
 
   const queryURL =
@@ -44,12 +55,15 @@ searchButtonEl.addEventListener("click", function() {
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        ${meeting.title}
+                        <p class="meeting-title">${meeting.title}</p>
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            <p class="data">${meeting.type}</p>
+                            <p class="data">${meeting.building}</p>
+                            <p class="data">${meeting.address}, ${meeting.region}, ${meeting.state}, ${meeting.postcode}</p>
+                            <p class="data">${meeting.directions}</p>
+                            <p><a href="https://www.google.com/maps/place/${meeting.address}+${meeting.state}+Australia/">Map</a></p>
                         </blockquote>
                     </div>
                 </div>
@@ -59,13 +73,8 @@ searchButtonEl.addEventListener("click", function() {
     }
   });
 });
-// axios.get(queryURL3)
-//     .then(function(uvResponse) {
-//         // console.log(uvResponse);
-//         document.getElementById("uv").innerHTML = "UV Index: " + uvResponse.data.value;
-//     })
 
-// // Get references to page elements
+// Get references to page elements
 // const exampleTextEl = document.getElementById("example-text");
 // const exampleDescriptionEl = document.getElementById("example-description");
 // const submitBtnEl = document.getElementById("submit");
