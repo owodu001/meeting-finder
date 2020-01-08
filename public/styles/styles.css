@@ -1,7 +1,18 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+}
+
+footer {
+  background-color: #fbc02d;
+  height: 10vh;
+  width: 100vw;
+  flex-shrink: 0;
 }
 
 .main-body-content {
@@ -118,18 +129,4 @@ body {
 .data {
   font-weight: 300;
   font-family: "Oswald", sans-serif;
-}
-
-.body-container-custom {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid black;
-  min-height: 80vh;
-}
-
-footer {
-  background-color: black;
-  height: 10vh;
-  width: 100vw;
-  flex-shrink: 0;
 }
