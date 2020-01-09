@@ -2,7 +2,7 @@ const db = require("../models");
 
 module.exports = {
   postExampleApi: async function(req, res) {
-    const user = await db.userInfo.create(req.body);
+    const user = await db.UserInfo.create(req.body);
     res.json(user);
   },
   api: function(app) {
@@ -23,7 +23,6 @@ module.exports = {
         res.json(dbExamples[0]);
       });
     });
-
     //add meeting route
     app.get("/api/user/:id", function(req, res) {
       console.log({ id: req.params.id });
