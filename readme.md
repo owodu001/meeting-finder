@@ -14,13 +14,16 @@ Usage
 This app was made as an easy way to locate AA meetings for users.
 
 Contributing
+
 Michelle Owodunni (Front-End)
 Matt Beachey (Front-End)
 Jesse Edwards (Back-End)
 Patrick Brown (Back-End)
 
+
 Challenges
 **_PLACEHOLDER_**
+
 
 License
 MIT
