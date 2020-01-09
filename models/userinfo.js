@@ -2,12 +2,12 @@ module.exports = function(sequelize, DataTypes) {
   const UserInfo = sequelize.define("UserInfo", {
     first_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
     last_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
     days_sober: {
@@ -32,17 +32,17 @@ module.exports = function(sequelize, DataTypes) {
 
     meeting_id: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
 
     types: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
     meeting_location: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
     directions: {
