@@ -9,11 +9,16 @@ export default {
       body: JSON.stringify(example)
     }).then(res => res.json());
   },
-  getuser: function() {
+  getExamples: function() {
     return fetch("/api/user").then(res => res.json());
   },
   getExample: function(id) {
     return fetch(`/api/user/${id}`).then(res => res.json());
+  },
+  addMeeting: function(id) {
+    return fetch("/api/user/" + id, {
+      method: "PUT"
+    }).then(res => res.json);
   },
   deleteExample: function(id) {
     return fetch("/api/user/" + id, {
