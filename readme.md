@@ -29,9 +29,17 @@ Jesse Edwards (Back-End)
 <br>
 Patrick Brown (Back-End)
 
+<<<<<<< HEAD
+
+# Challenges
+
+# **_PLACEHOLDER_**
+
 **Challenges**
 <br>
 Setting up and debugging passport authentication, gitub branching chaos, path issues, input validation.
+
+> > > > > > > ba6eaa19edadfd8f1bde499f2bb68a5fa260fb28
 
 License
 <br>
