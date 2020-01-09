@@ -125,6 +125,12 @@ footer {
   opacity: 0.7;
 }
 
+.search-button:focus {
+  background-color: #fbc02d;
+  color: black;
+  opacity: 0.4;
+}
+
 .meeting-type,
 .meeting-title {
   font-weight: bold;
@@ -153,4 +159,23 @@ button.advanced-search {
 .favorites:hover,
 .advanced-search:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  .header-text-Matt {
+    font-size: 5vh;
+    top: 15px;
+  }
+  .header-text-Matt:before {
+    top: -30px;
+  }
+  .header-text-Matt:after {
+    top: -15px;
+  }
+  .footer-quote {
+    font-size: 10px;
+  }
+  footer {
+    height: 17vh;
+  }
 }
