@@ -1,3 +1,28 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #fbc02d;
+  height: 10vh;
+  width: 100vw;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-body-content {
+  flex: 1 0 auto;
+  min-height: auto;
+}
+
 .header-cont-Matt {
   width: 99vw;
   position: absolute;
@@ -92,4 +117,32 @@
   transform: rotate(-45deg);
   opacity: 1;
   transition: 0.5s;
+}
+
+.meeting-type,
+.meeting-title {
+  font-weight: bold;
+}
+
+.meeting-title {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+.data {
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+}
+
+.footer-quote {
+  text-align: center;
+}
+
+button.advanced-search {
+  background: none;
+  border: none;
+}
+
+.advanced-search:hover {
+  text-decoration: underline;
 }
