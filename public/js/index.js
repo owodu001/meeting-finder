@@ -55,16 +55,26 @@ searchButtonEl.addEventListener("click", function() {
     day === "saturday" ||
     day === "sunday"
   ) {
-    console.log(day);
-    console.log("correct");
+    // console.log(day);
+    // console.log("correct");
   } else {
-    console.log("wrong");
+    daySearchEl.value = "";
+    daySearchEl.setAttribute(
+      "placeholder",
+      "Entry not valid: Please enter a day of the week"
+    );
+    // console.log("wrong");
   }
 
   if (time === "" || time === "morning" || time === "evening") {
-    console.log("yay");
+    // console.log("yay");
   } else {
-    console.log("noooooo");
+    timeSearchEl.value = "";
+    timeSearchEl.setAttribute(
+      "placeholder",
+      "Entry not valid: Please enter morning or evening"
+    );
+    // console.log("noooooo");
   }
 
   // console.log(day);
