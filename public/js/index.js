@@ -20,13 +20,53 @@ advancedSearchEl.addEventListener("click", function() {
   timeSearchEl.classList.remove("d-none");
 });
 
-//Axios call to the AA database
+// Add to favoritesfunction addFavorites() {
+// axios.post(`/api/user/${event.target.id}`)
+//     .then(function(response) {
+//         console.log(response);
+//     })
+//     .catch(function(error) {
+//         console.log(error);
+//     });
+// const favoritesEl = document.getElementById("favorites");
+// favoritesEl.addEventListener("click", function(event) {
+//     console.log(event);
+// })
 
+//Axios call to the AA database
 const searchButtonEl = document.getElementById("search-button");
 searchButtonEl.addEventListener("click", function() {
   const day = document.getElementById("search-day").value;
   const time = document.getElementById("search-time").value;
   const location = document.getElementById("search-location").value;
+  // const searchDataEl = document.getElementById("search-data");
+
+  // Advanced search field validations
+  // if(day !== "") {
+
+  // }
+  if (
+    day === "" ||
+    day === "monday" ||
+    day === "tuesday" ||
+    day === "wednesday" ||
+    day === "thursday" ||
+    day === "friday" ||
+    day === "saturday" ||
+    day === "sunday"
+  ) {
+    console.log(day);
+    console.log("correct");
+  } else {
+    console.log("wrong");
+  }
+
+  if (time === "" || time === "morning" || time === "evening") {
+    console.log("yay");
+  } else {
+    console.log("noooooo");
+  }
+
   // console.log(day);
   // console.log(time);
   // const day = " ";
@@ -45,12 +85,13 @@ searchButtonEl.addEventListener("click", function() {
 
   // eslint-disable-next-line no-undef
   axios.get(queryURL).then(function(response) {
-    console.log(response.data.meetings[0]);
+    // console.log(response.data.meetings[0]);
     const meetingsArr = response.data.meetings;
+    $("#search-data").html(``);
     for (let i = 0; i < 10; i++) {
       const meeting = meetingsArr[i];
-      console.log(meeting);
-      $("#meeting-container").append(`   
+      // console.log(meeting);
+      $("#search-data").append(`   
 <div class="row">
             <div class="col">
                 <div class="card">
@@ -63,7 +104,10 @@ searchButtonEl.addEventListener("click", function() {
                             <p class="data">${meeting.building}</p>
                             <p class="data">${meeting.address}, ${meeting.region}, ${meeting.state}, ${meeting.postcode}</p>
                             <p class="data">${meeting.directions}</p>
-                            <p><a href="https://www.google.com/maps/place/${meeting.address}+${meeting.state}+Australia/">Map</a></p>
+                            <p>
+                            <a href="https://www.google.com/maps/place/${meeting.address}+${meeting.state}+Australia/">Map</a>
+                            &nbsp <button class="favorites" id="favorites">Add to favorites</button>
+                            </p>
                         </blockquote>
                     </div>
                 </div>
