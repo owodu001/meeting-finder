@@ -1,10 +1,10 @@
 DROP DATABASE IF EXISTS user_db;
 CREATE DATABASE user_db;
 USE user_db;
-CREATE TABLE user_info (
-    id INT AUTO_INCREMENT NOT NULL,
-    first_name VARCHAR (50) NOT NULL,
-    last_name VARCHAR (50) NOT NULL,
+CREATE TABLE userInfo (
+    id INT AUTO_INCREMENT,
+    first_name VARCHAR (50),
+    last_name VARCHAR (50),
     days_sober INT (11),
     sponsor_first VARCHAR (50),
     sponsor_last VARCHAR (50),
