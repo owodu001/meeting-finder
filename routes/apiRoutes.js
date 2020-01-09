@@ -65,7 +65,14 @@ module.exports = {
       console.log(req.body);
       db.UserInfo.create({
         username: req.body.username,
-        password: req.body.password
+        password: req.body.password,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        days_sober: req.body.days_sober,
+        sponsor_first: req.body.sponsor_first,
+        Sponsor_first: req.body.Sponsor_last,
+        sponsor_cell: req.body.sponsor_cell,
+        meeting_id: req.body.meeting_id
       })
         .then(function() {
           res.redirect(307, "/api/login");
