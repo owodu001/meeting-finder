@@ -2,15 +2,15 @@ DROP DATABASE IF EXISTS user_db;
 CREATE DATABASE user_db;
 USE user_db;
 CREATE TABLE user_info (
-    id INT NOT NULL AUTO_INCREMENT,
-    first_name NOT NULL VARCHAR (50),
-    last_name  NOT NULL VARCHAR (50),
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR (50) NOT NULL,
+    last_name VARCHAR (50) NOT NULL,
     days_sober INT (11),
     sponsor_first VARCHAR (50),
     sponsor_last VARCHAR (50),
-    sponsor_cell  VARCHAR (10),
-    meeting_id INT (10) NOT NULL,
-    type VARCHAR (100),
+    sponsor_cell  VARCHAR (20),
+    meeting_id INT (10),
+    type VARCHAR (101),
     meeting_location VARCHAR (100),
     directions VARCHAR (100),
     meeting_1 VARCHAR (20), 
