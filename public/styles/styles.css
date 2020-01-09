@@ -119,6 +119,12 @@ footer {
   transition: 0.5s;
 }
 
+.search-button {
+  background-color: #fbc02d;
+  color: black;
+  opacity: 0.7;
+}
+
 .meeting-type,
 .meeting-title {
   font-weight: bold;
@@ -138,11 +144,13 @@ footer {
   text-align: center;
 }
 
+button.favorites,
 button.advanced-search {
   background: none;
   border: none;
 }
 
+.favorites:hover,
 .advanced-search:hover {
   text-decoration: underline;
 }
