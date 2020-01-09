@@ -30,7 +30,7 @@ Patrick Brown (Back-End)
 
 **Challenges**
 <br>
-PLACEHOLDER
+Setting up and debugging passport authentication, gitub branching chaos, path issues, input validation.
 
 License
 <br>
