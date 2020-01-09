@@ -6,17 +6,17 @@ module.exports = {
     res.json(dbExample);
   },
   api: function(app) {
-    // Get all examples
-    app.get("/api/examples", function(req, res) {
-      db.Example.findAll({}).then(function(dbExamples) {
+    // Get all
+    app.get("/api/users", function(req, res) {
+      db.UserInfo.findAll({}).then(function(dbExamples) {
         res.json(dbExamples);
       });
     });
 
     // Get an example
-    app.get("/api/examples/:id", function(req, res) {
+    app.get("/api/users/:id", function(req, res) {
       console.log({ id: req.params.id });
-      db.Example.findAll({ where: { id: req.params.id } }).then(function(
+      db.UserInfo.findAll({ where: { id: req.params.id } }).then(function(
         dbExamples
       ) {
         console.log(dbExamples);
