@@ -1,18 +1,29 @@
 require("dotenv").config();
-var express = require("express");
+const express = require("express");
+const bodyParser = require("body-parser");
+const session = require("express-session");
+const passport = require("./config/passport");
 
-var db = require("./models");
+const db = require("./models");
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static("public"));
+
+// We need to use sessions to keep track of our user's login status
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes
 const API = require("./routes/apiRoutes");
+require("./routes/html-routes.js")(app);
 API.api(app);
 
 var syncOptions = { force: false };
