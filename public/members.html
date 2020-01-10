@@ -2,37 +2,85 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
+  <div class="main-body-content">
+
+    <div class="header-cont-Matt">
+      <div class="header-text-Matt">Meeting Finder</div>
     </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
+    <div class="fill-in-div-hide" id="fillInDiv"></div>
+    <div class="login-forms" id="loginText"></div>
+    <div class="about-box" id="about-box">
+      <div class="bar1" id="bar1"></div>
+      <div class="bar2" id="bar2"></div>
+      <div class="bar3" id="bar3"></div>
+    </div>
+    <div class="row gap"></div>
+    <div class="row login-btns">
+      <div class="welcome">
+        <div id="welcome">
+          Welcome
+        </div>
+        <a href="/logout" class="logout">
+          Logout
+        </a>
       </div>
     </div>
-  </div>
-  <input id="modify-input">
-  
-  <button id="modify-button">Modify</button>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
 
+    <div class="container signed-in-meeting-cont" id="meeting-container">
+      <div class="input-group mb-3">
+        <input type="text" id="search-location" class="form-control" placeholder="Please enter a zip code or city name"
+          aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button id="search-button" class="search-button btn btn-outline-secondary" type="button"
+            id="button-addon2">Search</button>
+
+        </div>
+      </div>
+      <button class="advanced-search" id="advanced-search">Advanced Search</button>
+      <div class="input-group mb-3">
+        <input type="text" id="search-day" class="d-none form-control" placeholder="Please enter a day of the week"
+          aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" id="search-time" class="d-none form-control"
+          placeholder="Please enter either morning or evening" aria-label="Recipient's username"
+          aria-describedby="button-addon2">
+        <div class="input-group-append">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container" id="search-data"></div>
+  </div>
+  <footer id="footer-quote">
+
+  </footer>
+
+  <!-- <h1>Example</h1>
+    <input id="example-text">
+    <input id="example-description">
+    <button id="submit">submit</button>
+    <div id="example-list"></div> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/js/authentication.js"></script>
+  <script src="/js/loggedin.js" type="module"></script>
+  <script src="/js/index.js" type="module"></script>
+  <script src="/js/quoteArray.js"></script>
 </body>
 
 </html>

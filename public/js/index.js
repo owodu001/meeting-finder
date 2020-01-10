@@ -1,6 +1,6 @@
 import API, { string } from "/js/api.js";
 
-//click handler for menu/about block
+//click handlers for about menu/block
 const aboutButtonEl = document.getElementById("about-box");
 const topBarEl = document.getElementById("bar1");
 const midBarEl = document.getElementById("bar2");
@@ -19,19 +19,6 @@ advancedSearchEl.addEventListener("click", function() {
   daySearchEl.classList.remove("d-none");
   timeSearchEl.classList.remove("d-none");
 });
-
-// Add to favoritesfunction addFavorites() {
-// axios.post(`/api/user/${event.target.id}`)
-//     .then(function(response) {
-//         console.log(response);
-//     })
-//     .catch(function(error) {
-//         console.log(error);
-//     });
-// const favoritesEl = document.getElementById("favorites");
-// favoritesEl.addEventListener("click", function(event) {
-//     console.log(event);
-// })
 
 //Axios call to the AA database
 const searchButtonEl = document.getElementById("search-button");
@@ -116,7 +103,7 @@ searchButtonEl.addEventListener("click", function() {
                             <p class="data">${meeting.directions}</p>
                             <p>
                             <a href="https://www.google.com/maps/place/${meeting.address}+${meeting.state}+Australia/">Map</a>
-                            &nbsp <button class="favorites" id="favorites">Add to favorites</button>
+                            &nbsp <button class="favorites" onclick="addToFavorites(${meeting.id}, ${i})" id="favorites${i}">Add to favorites</button>
                             </p>
                         </blockquote>
                     </div>
@@ -127,6 +114,9 @@ searchButtonEl.addEventListener("click", function() {
     }
   });
 });
+
+//feature to add:
+//if the user tries to add a meeting to favorites when not logged in, they will be prompted to log in
 
 // Get references to page elements
 // const exampleTextEl = document.getElementById("example-text");
