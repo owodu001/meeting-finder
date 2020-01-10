@@ -1,4 +1,3 @@
-import API, { string } from "/js/api.js";
 //js features for signed in "members" page
 
 //this global variable will pick up the user's username to be used below
