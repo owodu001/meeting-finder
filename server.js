@@ -1,32 +1,21 @@
 require("dotenv").config();
-const express = require("express");
-const bodyParser = require("body-parser");
-const session = require("express-session");
-const passport = require("./config/passport");
+var express = require("express");
 
-const db = require("./models");
+var db = require("./models");
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+var app = express();
+var PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(express.static("public"));
-
-// We need to use sessions to keep track of our user's login status
-app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
-app.use(passport.initialize());
-app.use(passport.session());
 
 // Routes
 const API = require("./routes/apiRoutes");
-require("./routes/html-routes.js")(app);
 API.api(app);
 
-var syncOptions = { force: false };
+var syncOptions = { force: true }; //set to true to clear jawsdb. start server on heroku with true then shutdown. Revert to false and restart.
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
