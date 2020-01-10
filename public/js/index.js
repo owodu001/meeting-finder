@@ -1,4 +1,4 @@
-import API, { string } from "/js/api.js";
+// import API, { string } from "/js/api.js";
 
 //click handlers for about menu/block
 const aboutButtonEl = document.getElementById("about-box");
