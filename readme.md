@@ -8,7 +8,7 @@ An Australian AA meeting locator that allows users to find meetings based on sea
 
 **Deployed App**
 <br>
-https://meeting-finder.herokuapp.com/
+https://a3-meeting-finder.herokuapp.com/
 
 **Images**
 <br>
