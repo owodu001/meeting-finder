@@ -26,7 +26,7 @@ const API = require("./routes/apiRoutes");
 require("./routes/html-routes.js")(app);
 API.api(app);
 
-var syncOptions = { force: true }; //cear jawsdb on heroku change back to true after server restart!
+var syncOptions = { force: false }; //cear jawsdb on heroku change back to true after server restart!
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
