@@ -4,7 +4,7 @@ As a user I would like to locate AA meetings so that I can continue in the proce
 
 **Description**
 <br>
-An AA meeting locator that allows users to find meetings based on search criteria. Users are given the option to sign in or login as guest. Upon login, users can save searched meetings, view meeting history, and check-in to meetings.
+An Australian AA meeting locator that allows users to find meetings based on search criteria. Users are given the option to sign in, create a new account, or use the application as guest. Upon login, users can save searched meetings and view saved meetings. All users will find an advanced search option to filter results by day and time of day. A link to Google Maps is also available for each meeting for guests and returning users.
 
 **Deployed App**
 <br>
@@ -12,7 +12,15 @@ https://meeting-finder.herokuapp.com/
 
 **Images**
 <br>
-![scrnshot](https://user-images.githubusercontent.com/57024833/72097679-8bf04b00-32e2-11ea-830c-ca2b888bf041.PNG)
+![image](https://user-images.githubusercontent.com/55159065/72171948-9588ba00-3399-11ea-8d49-3f0898b8611b.png)
+![image](https://user-images.githubusercontent.com/55159065/72172705-725f0a00-339b-11ea-9c3a-3b14ba60a224.png)
+![image](https://user-images.githubusercontent.com/55159065/72172255-5444da00-339a-11ea-92c0-7b36d8ace1ae.png)
+![image](https://user-images.githubusercontent.com/55159065/72172354-90783a80-339a-11ea-8755-741f7e082766.png)
+"C:\Users\miche\homework\meeting-finder\public\gif\ScreenRecord.gif
+
+## GIF of Application Functionality
+
+![gif of app in use](./public/gif/ScreenRecord.gif)
 
 **Usage**
 <br>
@@ -29,17 +37,9 @@ Jesse Edwards (Back-End)
 <br>
 Patrick Brown (Back-End)
 
-<<<<<<< HEAD
-
-# Challenges
-
-# **_PLACEHOLDER_**
-
 **Challenges**
 <br>
 Setting up and debugging passport authentication, gitub branching chaos, path issues, input validation.
-
-> > > > > > > ba6eaa19edadfd8f1bde499f2bb68a5fa260fb28
 
 License
 <br>
