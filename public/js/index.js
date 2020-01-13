@@ -9,6 +9,8 @@ aboutButtonEl.addEventListener("click", function() {
   topBarEl.classList.toggle("bar1clicked");
   midBarEl.classList.toggle("bar2clicked");
   botBarEl.classList.toggle("bar3clicked");
+  // eslint-disable-next-line no-undef
+  openLoginForms();
 });
 
 // advanced search event listener

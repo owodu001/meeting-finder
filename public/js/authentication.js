@@ -6,6 +6,10 @@ const loginTextEl = document.getElementById("loginText");
 //event listener for login/signup to appear on screen
 let appearSelector = 1; //this mutable variable goes up by 1 to be used in a function below
 logInButton.addEventListener("click", function() {
+  openLoginForms();
+});
+
+function openLoginForms() {
   fillInDivEl.classList.toggle("fill-in-div");
   appearSelector++;
   if (appearSelector % 2 === 0) {
@@ -96,4 +100,4 @@ logInButton.addEventListener("click", function() {
     const logInForms = document.getElementById("log-in-forms");
     logInForms.parentNode.removeChild(logInForms);
   }
-});
+}
