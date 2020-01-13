@@ -13,8 +13,11 @@ https://a3-meeting-finder.herokuapp.com/
 **Images**
 <br>
 ![image](https://user-images.githubusercontent.com/55159065/72171948-9588ba00-3399-11ea-8d49-3f0898b8611b.png)
+
 ![image](https://user-images.githubusercontent.com/55159065/72172705-725f0a00-339b-11ea-9c3a-3b14ba60a224.png)
+
 ![image](https://user-images.githubusercontent.com/55159065/72172255-5444da00-339a-11ea-92c0-7b36d8ace1ae.png)
+
 ![image](https://user-images.githubusercontent.com/55159065/72172354-90783a80-339a-11ea-8755-741f7e082766.png)
 
 ## GIF of Application Functionality

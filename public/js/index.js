@@ -35,12 +35,19 @@ searchButtonEl.addEventListener("click", function() {
   if (
     day === "" ||
     day === "monday" ||
+    day === "Monday" ||
     day === "tuesday" ||
+    day === "Tuesday" ||
     day === "wednesday" ||
+    day === "Wednesday" ||
     day === "thursday" ||
+    day === "Thursday" ||
     day === "friday" ||
+    day === "Friday" ||
     day === "saturday" ||
-    day === "sunday"
+    day === "Saturday" ||
+    day === "sunday" ||
+    day === "Sunday"
   ) {
     // console.log(day);
     // console.log("correct");
@@ -53,7 +60,13 @@ searchButtonEl.addEventListener("click", function() {
     // console.log("wrong");
   }
 
-  if (time === "" || time === "morning" || time === "evening") {
+  if (
+    time === "" ||
+    time === "morning" ||
+    time === "evening" ||
+    time === "Morning" ||
+    time === "Evening"
+  ) {
     // console.log("yay");
   } else {
     timeSearchEl.value = "";
